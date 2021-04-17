@@ -11,6 +11,10 @@ public class Main {
         int y = scanner.nextInt();
         System.out.println("y="+y);
 
+        System.out.println("Input x:");
+        int x = scanner.nextInt();
+        System.out.println("x="+x);
+
         System.out.println("Input z:");
         int z = scanner.nextInt();
         System.out.println("z="+z);
