@@ -10,6 +10,7 @@ public class Main {
         Scanner scanner=new Scanner(System.in);
         int x = scanner.nextInt();
         System.out.println("x="+x);
+        int g = scanner.nextInt();
 
     }
 }
