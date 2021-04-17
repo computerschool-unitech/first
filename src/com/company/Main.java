@@ -1,30 +1,16 @@
-package com.company;
+import Alina.Products;
 
-import java.util.Scanner;
+import java.util.List;
+
+import static Alina.Controller.connectDatabase;
+import static Alina.Controller.getAllProducts;
 
 public class Main {
-
     public static void main(String[] args) {
-	// write your code here
-        System.out.println("Input y:");
-        Scanner scanner=new Scanner(System.in);
-        int y = scanner.nextInt();
-        System.out.println("y="+y);
-        int g = scanner.nextInt();
-
-        System.out.println("Input x:");
-        int x = scanner.nextInt();
-        System.out.println("x="+x);
-
-        System.out.println("Input z:");
-        int z = scanner.nextInt();
-        System.out.println("z="+z);
-        int aba = scanner.nextInt();
-        System.out.println("aba="+aba);
-        int ala = scanner.nextInt();
-        System.out.println("ala="+ala);
-
-
-        System.out.println("zyp[o");
+        connectDatabase();
+        List<Products> products = getAllProducts();
+        for(Products p:products)
+            System.out.println(p);
     }
+
 }
