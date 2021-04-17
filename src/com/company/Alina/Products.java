@@ -1,4 +1,4 @@
-package com.company.Alina;
+package Alina;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

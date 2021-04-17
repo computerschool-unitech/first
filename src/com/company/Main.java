@@ -1,13 +1,18 @@
-package com.company;
 
+
+import Alina.Products;
+
+import java.util.List;
+
+import static Alina.Controller.connectDatabase;
+import static Alina.Controller.getAllProducts;
 
 public class Main {
-
     public static void main(String[] args) {
-	// write your code here
         connectDatabase();
         List<Products> products = getAllProducts();
-        for(Product p:products)
+        for(Products p:products)
             System.out.println(p);
     }
+
 }
