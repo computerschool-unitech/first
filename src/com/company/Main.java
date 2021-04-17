@@ -8,8 +8,8 @@ public class Main {
 	// write your code here
         System.out.println("Input y:");
         Scanner scanner=new Scanner(System.in);
-        int x = scanner.nextInt();
-        System.out.println("x="+x);
+        int y = scanner.nextInt();
+        System.out.println("y="+y);
         int g = scanner.nextInt();
 
     }
