@@ -12,10 +12,19 @@ public class Main {
         System.out.println("y="+y);
         int g = scanner.nextInt();
 
+        System.out.println("Input x:");
+        int x = scanner.nextInt();
+        System.out.println("x="+x);
+
         System.out.println("Input z:");
         int z = scanner.nextInt();
         System.out.println("z="+z);
+        int aba = scanner.nextInt();
+        System.out.println("aba="+aba);
+        int ala = scanner.nextInt();
+        System.out.println("ala="+ala);
 
-        System.out.println("l;kasdjhg;");
+
+        System.out.println("zyp[o");
     }
 }
