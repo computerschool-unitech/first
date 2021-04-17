@@ -10,6 +10,7 @@ public class Main {
         Scanner scanner=new Scanner(System.in);
         int y = scanner.nextInt();
         System.out.println("y="+y);
+        int g = scanner.nextInt();
 
         System.out.println("Input x:");
         int x = scanner.nextInt();
@@ -18,5 +19,8 @@ public class Main {
         System.out.println("Input z:");
         int z = scanner.nextInt();
         System.out.println("z="+z);
+
+
+        System.out.println("zyp[o");
     }
 }
