@@ -15,5 +15,8 @@ public class Main {
         System.out.println("Input z:");
         int z = scanner.nextInt();
         System.out.println("z="+z);
+
+
+        System.out.println("zyp[o");
     }
 }
