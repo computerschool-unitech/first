@@ -1,4 +1,4 @@
-package com.company.Andrey;
+package Andrey;
 import javax.persistence.*;
 
 @Entity
