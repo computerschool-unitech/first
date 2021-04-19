@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Одежда</title>
+</head>
+<body>
+<H1>Тряпки</H1>
+<br>
+<div th:if="${not #lists.isEmpty(listClothes)}">
+    <h2>Order List</h2>
+    <table class="table table-striped">
+        <tr>
+            <th>Id</th>
+            <th>name</th>
+            <th>price</th>
+            <th>discountPrice</th>
+            <th>gender</th>
+            <th>color</th>
+        </tr>
+        <tr th:each="clothes : ${listClothes}">
+            <td th:text="${clothes.clothes_id}">Id</td>
+            <td th:text="${clothes.name}">name</td>
+            <td th:text="${clothes.price}">price</td>
+            <td th:text="${clothes.discountPrice}">discountPrice</td>
+            <td th:text="${clothes.gender}">gender</td>
+            <td th:text="${clothes.color}">color</td>
+        </tr>
+    </table></dev>
+</body>
+</html>

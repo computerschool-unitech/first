@@ -10,18 +10,14 @@ public class Orders {
     @Column(name = "order_id")
     private int order_id;
 
-
    /* @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "customer_id")
     Customers customer_id;
 
     */
 
-
     @Column(name = "customer_id")
     protected int customer_id;
-
-
 
 
     @Column(name = "order_status")

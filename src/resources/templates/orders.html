@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Заказы</title>
+</head>
+<body>
+<H1>Заказы</H1>
+<br>
+<div th:if="${not #lists.isEmpty(listOrders)}">
+    <h2>Order List</h2>
+    <table class="table table-striped">
+        <tr>
+            <th>id</th>
+            <th>Статус</th>
+            <th>Дата заказа</th>
+            <th>Требуемая дата доставки</th>
+            <th>Дата доставка</th>
+            <th>id товара</th>
+        </tr>
+        <tr th:each="orders : ${listOrders}">
+            <td th:text="${orders.customer_id}">id</td>
+            <td th:text="${orders.order_status}">Статус</td>
+            <td th:text="${orders.order_date}">Дата заказа</td>
+            <td th:text="${orders.required_date}">Требуемая дата доставки</td>
+            <td th:text="${orders.shipped_date}">Дата доставка</td>
+            <td th:text="${orders.product_id}">id товара</td>
+        </tr>
+    </table></dev>
+</body>
+</html>
