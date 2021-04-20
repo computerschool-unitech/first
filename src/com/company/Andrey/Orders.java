@@ -42,8 +42,8 @@ public class Orders {
     protected int product_id;
 
 
-
-    public Orders() { }
+    public Orders() {
+    }
 
 
     public int getOrder_id() {
@@ -101,4 +101,17 @@ public class Orders {
     public void setProduct_id(int product_id) {
         this.product_id = product_id;
     }
+    @Override
+    public String toString() {
+        return "Orders{" +
+                "order_id=" + order_id +
+                ", customer_id=" + customer_id +
+                ", order_status=" + order_status +
+                ", order_date='" + order_date + '\'' +
+                ", required_date='" + required_date + '\'' +
+                ", shipped_date='" + shipped_date + '\'' +
+                ", product_id=" + product_id +
+                '}';
+    }
+
 }

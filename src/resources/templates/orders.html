@@ -6,6 +6,7 @@
     <title>Заказы</title>
 </head>
 <body>
+<header th:replace="blocks/header :: header"></header>
 <H1>Заказы</H1>
 <br>
 <div th:if="${not #lists.isEmpty(listOrders)}">

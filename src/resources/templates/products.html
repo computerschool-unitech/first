@@ -5,6 +5,7 @@
     <title>Одежда</title>
 </head>
 <body>
+<header th:replace="blocks/header :: header"></header>
 <H1>Тряпки</H1>
 <br>
 <div th:if="${not #lists.isEmpty(listClothes)}">
