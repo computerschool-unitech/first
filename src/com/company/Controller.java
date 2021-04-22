@@ -1,5 +1,6 @@
 import Alina.Products;
 import Andrey.Orders;
+import Taras.Customers;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -16,6 +17,7 @@ public class Controller {
 
         config.addAnnotatedClass(Products.class);
         config.addAnnotatedClass(Orders.class);
+        config.addAnnotatedClass(Customers.class);
 
         StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder().applySettings(config.getProperties());
         factory = config.buildSessionFactory(builder.build());
@@ -27,6 +29,10 @@ public class Controller {
     public static List<Orders> getAllOrders(){
         List<Orders> Order = (List<Orders>) factory.openSession().createQuery("from Orders").list();
         return Order;
+    }
+    public static List<Customers> getAllCustomers(){
+        List<Customers> customers = (List<Customers>) factory.openSession().createQuery("from Customers").list();
+        return customers;
     }
 
 
