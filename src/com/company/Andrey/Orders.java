@@ -10,18 +10,14 @@ public class Orders {
     @Column(name = "order_id")
     private int order_id;
 
-
    /* @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "customer_id")
     Customers customer_id;
 
     */
 
-
     @Column(name = "customer_id")
     protected int customer_id;
-
-
 
 
     @Column(name = "order_status")
@@ -46,8 +42,8 @@ public class Orders {
     protected int product_id;
 
 
-
-    public Orders() { }
+    public Orders() {
+    }
 
 
     public int getOrder_id() {
@@ -105,4 +101,17 @@ public class Orders {
     public void setProduct_id(int product_id) {
         this.product_id = product_id;
     }
+    @Override
+    public String toString() {
+        return "Orders{" +
+                "order_id=" + order_id +
+                ", customer_id=" + customer_id +
+                ", order_status=" + order_status +
+                ", order_date='" + order_date + '\'' +
+                ", required_date='" + required_date + '\'' +
+                ", shipped_date='" + shipped_date + '\'' +
+                ", product_id=" + product_id +
+                '}';
+    }
+
 }

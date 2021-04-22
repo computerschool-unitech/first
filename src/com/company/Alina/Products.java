@@ -28,6 +28,7 @@ public class Products {
 
 
     public Products() {
+
     }
 
     public Products(int product_id, String product_name, int brand_id, int category_id,
