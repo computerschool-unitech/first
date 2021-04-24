@@ -24,7 +24,11 @@ public class MainController {
 
     @GetMapping("/products")
     public ModelAndView getProducts(){
-        return new ModelAndView("products" );
+        connectDatabase();
+        HashMap<String, List<Products>> model = new HashMap<>();
+        model.put("listProducts", getAllProducts());
+        return new ModelAndView("products", model );
+//        return new ModelAndView("products" );
     }
 
     @GetMapping("/orders")
