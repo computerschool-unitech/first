@@ -7,26 +7,26 @@
 </head>
 <body>
 <header th:replace="blocks/header :: header"></header>
-<H1>Тряпки</H1>
+<H1>Товары</H1>
 <br>
-<div th:if="${not #lists.isEmpty(listClothes)}">
-    <h2>Order List</h2>
+<div th:if="${not #lists.isEmpty(listProducts)}">
+    <h2>Products List</h2>
     <table class="table table-striped">
         <tr>
             <th>Id</th>
-            <th>name</th>
-            <th>price</th>
-            <th>discountPrice</th>
-            <th>gender</th>
-            <th>color</th>
+            <th>Имя</th>
+            <th>Бренд</th>
+            <th>Категория</th>
+            <th>Год выпуска</th>
+            <th>Список цен</th>
         </tr>
-        <tr th:each="clothes : ${listClothes}">
-            <td th:text="${clothes.clothes_id}">Id</td>
-            <td th:text="${clothes.name}">name</td>
-            <td th:text="${clothes.price}">price</td>
-            <td th:text="${clothes.discountPrice}">discountPrice</td>
-            <td th:text="${clothes.gender}">gender</td>
-            <td th:text="${clothes.color}">color</td>
+        <tr th:each=" products : ${listProducts}">
+            <td th:text="${products.product_id}">Id</td>
+            <td th:text="${products.product_name}">Имя</td>
+            <td th:text="${products.brand_id}">Бренд</td>
+            <td th:text="${products.category_id}">Категория</td>
+            <td th:text="${products.model_year}">Год выпуска</td>
+            <td th:text="${products.list_price}">Список цен</td>
         </tr>
     </table></dev>
 </body>
