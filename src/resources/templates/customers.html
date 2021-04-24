@@ -7,5 +7,33 @@
 <body>
 <header th:replace="blocks/header :: header"></header>
 
+
+<div th:if="${not #lists.isEmpty(listCustomers)}">
+    <h2>Order List</h2>
+    <table class="table table-striped">
+        <tr>
+            <th>id</th>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Номер телефона</th>
+            <th>Эмейл</th>
+            <th>Улица</th>
+            <th>Город</th>
+            <th>Область</th>
+            <th>Индекс</th>
+
+        </tr>
+        <tr th:each="customers : ${listCustomers}">
+            <td th:text="${customers.customer_id}">id</td>
+            <td th:text="${customers.first_name}">Имя</td>
+            <td th:text="${customers.last_name}">Фамилия</td>
+            <td th:text="${customers.phone}">Номер телефона</td>
+            <td th:text="${customers.email}">Эмейл</td>
+            <td th:text="${customers.street}">Улица</td>
+            <td th:text="${customers.city}">Город</td>
+            <td th:text="${customers.state}">Область</td>
+            <td th:text="${customers.zip_code}">Индекс</td>
+        </tr>
+    </table></dev>
 </body>
 </html>

@@ -2,6 +2,7 @@ package com.company.springController;
 
 import Alina.Products;
 import Andrey.Orders;
+import Taras.Customers;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -36,7 +37,11 @@ public class MainController {
 
     @GetMapping("/customers")
     public ModelAndView getCustomer(){
-        return new ModelAndView("customers" );
+        connectDatabase();
+        HashMap<String, List<Customers>> model = new HashMap<>();
+        model.put("listCustomers", getAllCustomers());
+
+       return new ModelAndView("customers", model );
     }
 
     static void connectDatabase() {
@@ -45,6 +50,7 @@ public class MainController {
 
         config.addAnnotatedClass(Products.class);
         config.addAnnotatedClass(Orders.class);
+        config.addAnnotatedClass(Customers.class);
 
         StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder().applySettings(config.getProperties());
         factory = config.buildSessionFactory(builder.build());
@@ -56,6 +62,10 @@ public class MainController {
     public static List<Orders> getAllOrders(){
         List<Orders> orders= (List<Orders>) factory.openSession().createQuery("from Orders").list();
         return orders;
+    }
+    public static List<Customers> getAllCustomers(){
+        List<Customers> customers= (List<Customers>) factory.openSession().createQuery("from Customers").list();
+        return customers;
     }
 
 

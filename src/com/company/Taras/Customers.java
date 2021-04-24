@@ -17,15 +17,15 @@ public class Customers {
     Orders order_id;
     */
 
-    @Column(name="order_id")
-    protected int order_id;
+    //@Column(name="order_id")
+    protected int order_id=0;
 
     @Column(name="first_name")
     protected String first_name;
     @Column(name="last_name")
     protected String last_name;
     @Column(name="phone")
-    protected int phone;
+    protected String phone;
     @Column(name="email")
     protected String email;
     @Column(name="street")
@@ -35,7 +35,7 @@ public class Customers {
     @Column(name="state")
     protected String state;
     @Column(name="zip_code")
-    protected int zip_code;
+    protected String zip_code;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "product_id")
@@ -82,11 +82,11 @@ public class Customers {
         this.last_name = last_name;
     }
 
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
@@ -122,11 +122,11 @@ public class Customers {
         this.state = state;
     }
 
-    public int getZip_code() {
+    public String getZip_code() {
         return zip_code;
     }
 
-    public void setZip_code(int zip_code) {
+    public void setZip_code(String zip_code) {
         this.zip_code = zip_code;
     }
 }
